@@ -372,7 +372,9 @@ footer .f-logo{filter:brightness(0) invert(1);height:26px;width:auto;margin-bott
 <main id="top">
 <!-- HERO -->
 <section class="hero">
- <video class="hero-bg" src="hero.mp4" poster="hero_poster.jpg" autoplay muted loop playsinline preload="auto" aria-hidden="true"></video>
+ <video class="hero-bg" poster="hero_poster.jpg" autoplay muted loop playsinline preload="auto" aria-hidden="true"></video>
+ <script>// PC는 왼쪽이 하얗게 덮여 인물을 오른쪽으로 옮긴 영상, 휴대폰은 원래 구도 영상
+ (v => { v.src = matchMedia('(max-width:900px)').matches ? 'hero_m.mp4' : 'hero.mp4'; v.play().catch(() => {}); })(document.currentScript.previousElementSibling);</script>
  <div class="wrap">
   <div class="hero-txt">
    <span class="tag"><svg viewBox="0 0 24 24" fill="#D87036"><path d="M12 2C8 2 5 5 5 9c0 5 7 13 7 13s7-8 7-13c0-4-3-7-7-7zm0 9.5A2.5 2.5 0 1 1 12 6.5a2.5 2.5 0 0 1 0 5z"/></svg>부산 동래구 사직동 · 사직사거리</span>
