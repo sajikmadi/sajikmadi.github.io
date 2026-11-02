@@ -109,13 +109,38 @@ nav a:hover{color:var(--or)}
 
 /* snepi */
 .snepi{background:linear-gradient(135deg,var(--or-l),#fff 70%)}
-.sn-box{display:grid;grid-template-columns:1fr 1fr;gap:48px;align-items:center}
-.sn-flow{display:grid;gap:10px}
-.sn-step{display:flex;align-items:center;gap:14px;background:#fff;border-radius:16px;padding:16px 20px;box-shadow:0 4px 14px rgba(0,0,0,.05);font-weight:600}
-.sn-step span{flex:none;width:34px;height:34px;border-radius:50%;background:var(--gr);color:#fff;display:grid;place-items:center;font-size:14px;font-weight:800}
-.sn-arrow{text-align:center;color:var(--or);font-size:20px;line-height:1}
-.sn-chips{display:flex;flex-wrap:wrap;gap:8px;margin-top:22px}
-.sn-chips span{font-size:14px;font-weight:600;background:#fff;border:1px solid #EFC9B2;color:#A44F22;border-radius:30px;padding:5px 13px}
+.sn-intro{margin-top:28px;display:grid;grid-template-columns:1.1fr 1fr;gap:40px;align-items:center}
+.sn-txt p{font-size:17px;color:var(--sub);margin-bottom:14px}
+.sn-txt b{color:var(--ink)}
+.sn-cmp{display:grid;grid-template-columns:1fr 1fr;gap:12px}
+.sn-cmp .col{background:#fff;border-radius:18px;padding:18px 16px;box-shadow:0 4px 14px rgba(0,0,0,.05);text-align:center}
+.sn-cmp h4{font-size:14px;color:#8A9096;margin-bottom:10px}
+.sn-cmp .st{background:#F4F1EE;border-radius:12px;padding:10px 8px;font-size:14.5px;font-weight:700;color:var(--ink)}
+.sn-cmp .ar{color:#B9AFA4;font-size:16px;line-height:1.5}
+.sn-cmp .col.on{background:var(--gr)}
+.sn-cmp .col.on h4{color:#F6B98F}
+.sn-cmp .col.on .st{background:rgba(255,255,255,.12);color:#fff}
+.sn-cmp .col.on .ar{color:var(--or)}
+.sn-feat{margin-top:36px;display:grid;grid-template-columns:repeat(3,1fr);gap:14px}
+.sn-feat .ft{background:#fff;border:1px solid #F2DCCD;border-radius:18px;padding:20px 22px}
+.sn-feat .ic{width:40px;height:40px;border-radius:12px;background:var(--or-l);display:grid;place-items:center;margin-bottom:10px}
+.sn-feat .ic svg{width:22px;height:22px;fill:none;stroke:var(--or);stroke-width:2;stroke-linecap:round;stroke-linejoin:round}
+.sn-feat h4{font-size:17px;color:var(--gr);margin-bottom:4px}
+.sn-feat p{font-size:15px;color:var(--sub)}
+.sn-h{margin-top:56px;font-size:24px;font-weight:500;color:var(--ink)}
+.sn-h b{color:var(--gr);font-weight:800}
+.sn-sym{margin-top:20px;display:grid;grid-template-columns:repeat(4,1fr);gap:12px}
+.sy{background:#fff;border-radius:16px;padding:16px 18px;box-shadow:0 3px 12px rgba(0,0,0,.04)}
+.sy span{font-size:12.5px;font-weight:800;color:var(--or);letter-spacing:.05em}
+.sy h4{font-size:16px;color:var(--gr);margin:2px 0 4px}
+.sy p{font-size:14px;color:var(--sub);line-height:1.55}
+.sn-vids{margin-top:20px;display:grid;grid-template-columns:repeat(3,minmax(0,320px));gap:16px}
+.vid{display:block;text-align:left;background:#fff;border:0;border-radius:16px;padding:8px;cursor:pointer;box-shadow:0 3px 12px rgba(0,0,0,.05);font:inherit}
+.vid .th{position:relative;display:block;aspect-ratio:16/9;border-radius:10px;overflow:hidden;background:#000}
+.vid .th img,.vid .th iframe{width:100%;height:100%;object-fit:cover;border:0;display:block}
+.vid .th i{position:absolute;left:50%;top:50%;width:52px;height:36px;margin:-18px 0 0 -26px;border-radius:10px;background:#FF0000}
+.vid .th i::after{content:"";position:absolute;left:21px;top:10px;border-left:13px solid #fff;border-top:8px solid transparent;border-bottom:8px solid transparent}
+.vid .tt{display:block;padding:8px 4px 2px;font-size:14px;font-weight:700;color:var(--ink);line-height:1.45}
 .small{font-size:13px;color:#8A9096;margin-top:14px}
 
 /* faq */
@@ -250,7 +275,31 @@ footer .f-logo{filter:brightness(0) invert(1);height:26px;width:auto;margin-bott
   .hero-img img{width:min(85%,372px)}
   .who-grid,.tr-grid{grid-template-columns:1fr}
   .sym-grid{grid-template-columns:1fr 1fr}
-  .yt-main,.channels,.posts,.pr-2col{grid-template-columns:1fr}
+  .yt-main,.posts,.pr-2col,.sn-intro,.sn-feat{grid-template-columns:1fr}
+  .sn-intro{gap:20px}
+  .sn-txt p{font-size:15.5px}
+  .sn-cmp .st{font-size:13px;padding:9px 6px}
+  .sn-feat{margin-top:24px;gap:10px}
+  .sn-feat .ft{display:grid;grid-template-columns:40px 1fr;column-gap:12px;padding:16px}
+  .sn-feat .ic{grid-row:span 2;margin:0}
+  .sn-feat p{font-size:14px}
+  .sn-h{margin-top:40px;font-size:20px}
+  .sn-sym{grid-template-columns:1fr 1fr;gap:8px}
+  .sy{padding:12px 13px}
+  .sy h4{font-size:14.5px}
+  .sy p{font-size:12.5px}
+  .sn-vids{grid-template-columns:1fr 1fr;gap:8px}
+  .vid{padding:5px}
+  .vid .th i{width:40px;height:28px;margin:-14px 0 0 -20px}
+  .vid .th i::after{left:16px;top:7px;border-left-width:10px;border-top-width:7px;border-bottom-width:7px}
+  .vid .tt{font-size:12.5px}
+  .cta{flex-wrap:nowrap;gap:8px}
+  .cta .btn{flex:1;font-size:15px;padding:13px 8px;gap:6px;white-space:nowrap}
+  .cta .btn svg{width:16px;height:16px}
+  .channels{margin-top:32px;gap:8px}
+  .ch{flex-direction:column;justify-content:center;gap:6px;padding:12px 4px;border-radius:14px;font-size:13.5px;text-align:center}
+  .ch small{display:none}
+  .ch svg{width:24px;height:24px}
   .pr-2col{gap:16px}
   .yt-list{max-height:none;grid-auto-flow:column;grid-auto-columns:36%;overflow-x:auto}
   .yt-item{flex-direction:column;align-items:stretch;gap:6px;padding:4px}
@@ -259,7 +308,9 @@ footer .f-logo{filter:brightness(0) invert(1);height:26px;width:auto;margin-bott
   .ig-grid{grid-template-columns:1fr}
   .ig-card{flex-wrap:wrap}
   .ig-btn{margin-left:0;width:100%}
-  .hd-sns{display:none}
+  .hd-sns{gap:2px;margin-right:6px}
+  .hd-sns a{width:32px;height:32px}
+  .hd-sns svg{width:25px;height:25px}
   .about .wrap{gap:32px}
   .mbar{display:grid;grid-template-columns:repeat(3,1fr);position:fixed;left:0;right:0;bottom:0;z-index:60;background:#fff;border-top:1px solid var(--line);padding:8px 8px calc(8px + env(safe-area-inset-bottom))}
   .mbar a{display:flex;flex-direction:column;align-items:center;gap:2px;font-size:13px;font-weight:700;color:var(--gr);padding:6px 0}
@@ -362,12 +413,12 @@ footer .f-logo{filter:brightness(0) invert(1);height:26px;width:auto;margin-bott
   <span class="eyebrow">FOR YOU</span>
   <h2>이런 분들께<br><b>사직마디의원을 권해드려요</b></h2>
   <div class="who-grid">
-   <div class="who"><span class="n">01</span>CT·MRI 검사로도 원인을 찾지 못해 <b>여러 병원을 다녀 보신 분</b></div>
-   <div class="who"><span class="n">02</span>수술 후에도 불편함이 남아 <b>비수술 치료를 원하시는 분</b></div>
-   <div class="who"><span class="n">03</span>오래된 통증이라 <b>치료를 미뤄 오신 분</b></div>
-   <div class="who"><span class="n">04</span><b>스테로이드 주사가 부담</b>되거나 더 이상 맞기 어려우신 분</div>
-   <div class="who"><span class="n">05</span>당뇨·신장질환 등으로 <b>약물치료가 어려우신 분</b></div>
-   <div class="who"><span class="n">06</span>임신 중이거나 운동선수·성장기 아이처럼 <b>약 사용이 조심스러운 분</b></div>
+   <div class="who"><span class="n">01</span>CT·MRI 검사로도 원인을 찾지 못해 <b>여러 병원을 다녀 보신&nbsp;분</b></div>
+   <div class="who"><span class="n">02</span>수술 후에도 불편함이 남아 <b>비수술 치료를 원하시는&nbsp;분</b></div>
+   <div class="who"><span class="n">03</span>오래된 통증이라 <b>치료를 미뤄 오신&nbsp;분</b></div>
+   <div class="who"><span class="n">04</span><b>스테로이드 주사가 부담</b>되거나 더 이상 맞기 어려우신&nbsp;분</div>
+   <div class="who"><span class="n">05</span>당뇨·신장질환 등으로 <b>약물치료가 어려우신&nbsp;분</b></div>
+   <div class="who"><span class="n">06</span>임신 중이거나 운동선수·성장기 아이처럼 <b>약 사용이 조심스러운&nbsp;분</b></div>
   </div>
  </div>
 </section>
@@ -408,18 +459,46 @@ footer .f-logo{filter:brightness(0) invert(1);height:26px;width:auto;margin-bott
 
 <!-- SNEPI -->
 <section class="snepi" id="snepi">
- <div class="wrap sn-box">
-  <div>
-   <span class="eyebrow">SNEPI</span>
-   <h2>목을 주물러도 그때뿐이라면<br><b>자율신경 스네피치료</b></h2>
-   <p class="lead">거북목·라운드숄더로 목 근육이 버티는 힘은 등 윗부분까지 전해집니다. 머리와 목으로 가는 자율신경의 뿌리가 바로 이곳에 있어, 부담이 쌓이면 두통·어지럼 같은 증상으로 이어질 수 있어요. 스네피치료는 목과 등 윗부분을 함께 치료합니다.</p>
-   <div class="sn-chips"><span>두통</span><span>어지럼</span><span>귀 먹먹함</span><span>가슴 답답함</span><span>속쓰림·소화불량</span><span>불면</span><span>만성피로</span></div>
+ <div class="wrap">
+  <span class="eyebrow">SNEPI</span>
+  <h2>자율신경을 편안하게,<br><b>스네피(SNEPI) 치료</b></h2>
+  <div class="sn-intro">
+   <div class="sn-txt">
+    <p>척추 주변 근육이 굳어 물리적인 압박이 생기면 <b>교감신경이 과도하게 흥분</b>되고, 이로 인해 각 장기로 가는 혈액순환에 영향을 줄 수 있습니다.</p>
+    <p>스네피 치료는 이렇게 긴장된 척추 주변 근육을 풀어주어 <b>교감신경을 안정</b>시키고, 혈류 개선을 통해 <b>장기 본래의 기능이 회복</b>되도록 돕는 치료입니다.</p>
+   </div>
+   <div class="sn-cmp">
+    <div class="col"><h4>이럴 때 증상이 생겨요</h4><div class="st">척추 주변 근육이 굳음</div><div class="ar">↓</div><div class="st">교감신경 과흥분</div><div class="ar">↓</div><div class="st">장기로 가는 혈액순환 저하</div></div>
+    <div class="col on"><h4>스네피 치료</h4><div class="st">척추 주변 근육 긴장 풀기</div><div class="ar">↓</div><div class="st">교감신경 안정</div><div class="ar">↓</div><div class="st">혈류 개선 · 장기 기능 회복</div></div>
+   </div>
   </div>
-  <div class="sn-flow">
-   <div class="sn-step"><span>1</span>거북목·라운드숄더</div><div class="sn-arrow">↓</div>
-   <div class="sn-step"><span>2</span>목 근육 과부하</div><div class="sn-arrow">↓</div>
-   <div class="sn-step"><span>3</span>등 윗부분(상부 흉추) 부담</div><div class="sn-arrow">↓</div>
-   <div class="sn-step" style="background:var(--gr);color:#fff"><span style="background:var(--or)">4</span>두통·어지럼 등 자율신경 증상</div>
+  <div class="sn-feat">
+   <div class="ft"><div class="ic"><svg viewBox="0 0 24 24"><circle cx="12" cy="8" r="4"/><path d="M4 21a8 8 0 0 1 16 0"/></svg></div><h4>1:1 맞춤 치료</h4><p>호소하시는 증상과 척추 압통 부위를 하나하나 대조해 치료 계획을 세웁니다.</p></div>
+   <div class="ft"><div class="ic"><svg viewBox="0 0 24 24"><path d="M12 3s6 6.5 6 11a6 6 0 0 1-12 0c0-4.5 6-11 6-11z"/></svg></div><h4>안전한 성분</h4><p>포도당이나 생리식염수를 사용해 부담을 최소화했습니다.</p></div>
+   <div class="ft"><div class="ic"><svg viewBox="0 0 24 24"><path d="M9 6h11M9 12h11M9 18h11M4 6h.01M4 12h.01M4 18h.01"/></svg></div><h4>다양한 적용 증상</h4><p>두경부, 심장, 폐, 소화기, 비뇨생식기 등 다양한 자율신경계 증상에 적용할 수 있습니다.</p></div>
+  </div>
+  <h3 class="sn-h">이런 증상이 있다면 <b>자율신경</b>을 살펴보세요</h3>
+  <div class="sn-sym">
+   <div class="sy"><span>01</span><h4>어지럼증 · 기립성저혈압</h4><p>앉았다 일어날 때 눈앞이 캄캄해진다면?</p></div>
+   <div class="sy"><span>02</span><h4>만성 두통</h4><p>두통약을 달고 산다면?</p></div>
+   <div class="sy"><span>03</span><h4>가슴 두근거림</h4><p>가만히 있어도 심장이 두근거린다면?</p></div>
+   <div class="sy"><span>04</span><h4>브레인포그</h4><p>뒷목 당기고 머리가 멍하다면?</p></div>
+   <div class="sy"><span>05</span><h4>안구건조증 · 이명</h4><p>눈이 뻑뻑하거나 눈 안쪽이 뻐근하다면? 귀가 먹먹하거나 귀에서 삐- 소리가 난다면?</p></div>
+   <div class="sy"><span>06</span><h4>목이물감 · 역류성식도염</h4><p>목에 이물감이 있으면서 만성 기침이 동반된다면?</p></div>
+   <div class="sy"><span>07</span><h4>수면장애 · 불면증</h4><p>깊은 잠에 못 들고, 자도 잔 것 같지 않다면?</p></div>
+   <div class="sy"><span>08</span><h4>식은땀 · 발한 이상</h4><p>긴장하면 식은땀부터 난다면?</p></div>
+   <div class="sy"><span>09</span><h4>만성 소화불량 · 복부 팽만</h4><p>위내시경은 정상인데 소화가 안 된다면?</p></div>
+   <div class="sy"><span>10</span><h4>만성 피로</h4><p>자고 일어나도 피로가 안 풀린다면?</p></div>
+   <div class="sy"><span>11</span><h4>수족 냉증</h4><p>손발이 유독 차갑고 시리다면?</p></div>
+   <div class="sy"><span>12</span><h4>과민성대장증후군</h4><p>대장내시경은 정상인데 배가 자주 아프다면?</p></div>
+   <div class="sy"><span>13</span><h4>생리통</h4><p>생리할 때 아랫배랑 허리, 골반이 다 아프다면?</p></div>
+   <div class="sy"><span>14</span><h4>우울 · 불안 · 짜증 · 호흡곤란</h4><p>이유 없이 짜증나고 우울하고 불안하면서 가슴이 답답하고 호흡이 곤란해진다면?</p></div>
+  </div>
+  <h3 class="sn-h">원장님이 직접 설명하는 <b>스네피 치료</b></h3>
+  <div class="sn-vids">
+   <div class="vid" role="button" tabindex="0" data-id="mv7UUW_pIL0"><span class="th"><img src="https://i.ytimg.com/vi/mv7UUW_pIL0/hqdefault.jpg" alt="" loading="lazy"><i></i></span><span class="tt">내가 자는 동안에도 몸은 일하고 있다? 우리 몸의 균형을 잡는 자율신경계 이야기</span></div>
+   <div class="vid" role="button" tabindex="0" data-id="vzN0K0zg-gA"><span class="th"><img src="https://i.ytimg.com/vi/vzN0K0zg-gA/hqdefault.jpg" alt="" loading="lazy"><i></i></span><span class="tt">원인 모를 만성 증상, 자율신경계 문제일까? 스네피(SNEPI) 치료의 모든 것</span></div>
+   <div class="vid" role="button" tabindex="0" data-id="JChwFhCx5zA"><span class="th"><img src="https://i.ytimg.com/vi/JChwFhCx5zA/hqdefault.jpg" alt="" loading="lazy"><i></i></span><span class="tt">기절할 듯한 공포, 공황 아닌 '자율신경 셧다운'</span></div>
   </div>
  </div>
 </section>
@@ -590,6 +669,10 @@ fetch('feed.json', {cache: 'no-store'}).then(r => r.ok ? r.json() : Promise.reje
 document.querySelectorAll('.tabs button').forEach(b => b.onclick = () => {
   document.querySelectorAll('.tabs button').forEach(x => x.classList.toggle('on', x === b));
   document.querySelectorAll('.panel').forEach(p => p.hidden = p.id !== 'p-' + b.dataset.tab);
+});
+document.querySelectorAll('.vid').forEach(b => b.onclick = () => {
+  b.querySelector('.th').innerHTML = `<iframe src="https://www.youtube-nocookie.com/embed/${b.dataset.id}?autoplay=1&rel=0" allow="autoplay; encrypted-media; picture-in-picture" allowfullscreen></iframe>`;
+  b.onclick = null;
 });
 </script>
 </body>
