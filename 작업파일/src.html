@@ -129,6 +129,8 @@ details .a b{color:var(--ink)}
 .pr .ef{display:block;font-style:normal;font-size:13.5px;font-weight:600;color:#C25E27;margin-top:2px}
 .pr td:first-child{padding-right:12px}
 .pr.wide{grid-column:1/-1}
+.pr.wide td{border-bottom:1.5px dashed #B9AFA4}
+.pr.wide .opt td{border-bottom-color:#E2B89C}
 .pr-2col{display:grid;grid-template-columns:1fr 1fr;gap:28px;align-items:start}
 .opt{background:#FFF7F1;border:1.5px dashed #EFC9B2;border-radius:12px;padding:10px 14px}
 .opt h4{font-size:14px;color:#C25E27;margin-bottom:2px}
@@ -414,10 +416,12 @@ footer .f-logo{filter:brightness(0) invert(1);height:26px;width:auto;margin-bott
   <h2>비급여 <b>진료비 안내</b></h2>
   <p class="lead">아래 금액은 비급여 항목이며, 진찰 후 필요한 치료만 안내해 드립니다.</p>
   <div class="pr-grid">
-   <div class="pr"><h3>도수치료</h3><table>
-    <tr><td>도수치료 30분</td><td>70,000원</td></tr><tr><td>도수치료 60분</td><td>140,000원</td></tr></table></div>
+   <div class="pr"><h3>도수/신장분사치료</h3><table>
+    <tr><td>기본 수기치료 10분</td><td>2,000원</td></tr>
+    <tr><td>관리급여 30분</td><td>42,000원</td></tr>
+    <tr><td>신장분사치료 30분~1시간</td><td>70,000~130,000원</td></tr></table></div>
    <div class="pr"><h3>체외충격파 · 검사</h3><table>
-    <tr><td>체외충격파 1부위</td><td>40,000원</td></tr><tr><td>체외충격파 2부위</td><td>60,000원</td></tr>
+    <tr><td>체외충격파 2,000타</td><td>50,000원</td></tr><tr><td>체외충격파 4,000타</td><td>80,000원</td></tr>
     <tr><td>자율신경 검사<small>옴니핏 뇌파·맥파 — 두뇌건강, 스트레스·자율신경 상태 확인</small></td><td>45,000원</td></tr></table></div>
    <div class="pr wide"><h3>수액치료</h3><div class="pr-2col"><table>
     <tr><td>프리미엄 올인원<small>마이어스 칵테일 + 영양수액</small><em class="ef">회복과 영양보충을 한번에</em></td><td>100,000원</td></tr>
