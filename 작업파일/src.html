@@ -285,7 +285,7 @@ footer .f-logo{filter:brightness(0) invert(1);height:26px;width:auto;margin-bott
  <div class="wrap hd">
   <a class="logo" href="#top" aria-label="사직마디의원"><img src="{{LOGO}}" alt="사직마디의원"></a>
   <nav>
-   <a href="#about">병원소개</a><a href="#symptoms">진료과목</a><a href="#treatments">치료안내</a><a href="#news">영상·블로그</a><a href="#faq">자주 묻는 질문</a><a href="#info">진료안내·오시는길</a>
+   <a href="#about">병원소개</a><a href="#news">영상·블로그</a><a href="#symptoms">진료과목</a><a href="#treatments">치료안내</a><a href="#faq">자주 묻는 질문</a><a href="#info">진료안내·오시는길</a>
   </nav>
   <div class="hd-r">
   <div class="hd-sns">
@@ -331,6 +331,27 @@ footer .f-logo{filter:brightness(0) invert(1);height:26px;width:auto;margin-bott
    <div class="pt"><i>02</i><div><h3>스테로이드 없는 비수술 치료</h3><p>포도당 기반 주사와 도수·체외충격파 치료로, 몸이 스스로 회복하는 힘을 돕습니다.</p></div></div>
    <div class="pt"><i>03</i><div><h3>머리부터 발끝까지</h3><p>근골격 통증은 물론, 두통·어지럼·소화불량 같은 자율신경 증상도 함께 살핍니다.</p></div></div>
    <div class="pt"><i>04</i><div><h3>예약 우선제</h3><p>한 분 한 분 충분히 진료할 수 있도록 예약 우선으로 운영합니다.</p></div></div>
+  </div>
+ </div>
+</section>
+
+<!-- NEWS -->
+<section class="news" id="news">
+ <div class="wrap">
+  <span class="eyebrow">VIDEO & BLOG</span>
+  <h2>원장님이 직접 전하는<br><b>건강 이야기</b></h2>
+  <p class="lead">유튜브와 블로그에 새 글이 올라오면 이곳에도 자동으로 보여요.</p>
+  <div class="tabs" role="tablist">
+   <button class="on" data-tab="videos">유튜브</button><button data-tab="blog">블로그</button><button data-tab="insta">인스타그램</button>
+  </div>
+  <div class="panel" id="p-videos"><div class="yt-main"><div class="yt-player"><iframe id="yt-frame" title="사직마디의원 유튜브" allow="accelerometer; encrypted-media; gyroscope; picture-in-picture" allowfullscreen loading="lazy"></iframe></div><div class="yt-list" id="yt-list"></div></div></div>
+  <div class="panel" id="p-blog" hidden><div class="posts" id="posts"></div><div class="more"><a class="btn btn-line" href="https://blog.naver.com/sajik_madi" target="_blank" rel="noopener">블로그 글 더 보기</a></div></div>
+  <div class="panel" id="p-insta" hidden><div class="ig-grid" id="ig-grid"></div>
+   <div class="ig-card" id="ig-card"><div class="ig-av"><img src="{{LOGO}}" alt=""></div><div><b>sajik_madi</b><span>사직마디의원 · 부산 동래구 사직동</span></div><a class="btn ig-btn" href="https://www.instagram.com/sajik_madi" target="_blank" rel="noopener">인스타그램에서 보기</a></div></div>
+  <div class="channels">
+   <a class="ch yt" href="https://www.youtube.com/@%EC%82%AC%EC%A7%81%EB%A7%88%EB%94%94" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M23 7.2a3 3 0 0 0-2.1-2.1C19 4.6 12 4.6 12 4.6s-7 0-8.9.5A3 3 0 0 0 1 7.2 31 31 0 0 0 .5 12a31 31 0 0 0 .5 4.8 3 3 0 0 0 2.1 2.1c1.9.5 8.9.5 8.9.5s7 0 8.9-.5a3 3 0 0 0 2.1-2.1 31 31 0 0 0 .5-4.8 31 31 0 0 0-.5-4.8zM9.7 15.1V8.9l5.8 3.1z"/></svg><div>유튜브<small>@사직마디 구독하기</small></div></a>
+   <a class="ch bl" href="https://blog.naver.com/sajik_madi" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M4 3h16a1 1 0 0 1 1 1v13a1 1 0 0 1-1 1h-6l-2 3-2-3H4a1 1 0 0 1-1-1V4a1 1 0 0 1 1-1zm3.5 4v7h2.2c1.6 0 2.5-.7 2.5-2 0-.8-.5-1.3-1.1-1.5.5-.3.8-.7.8-1.3 0-1.4-1-2.2-2.5-2.2zm1.6 1.3h.7c.5 0 .8.3.8.7s-.3.7-.8.7h-.7zm0 2.6h.9c.6 0 .9.3.9.8s-.3.8-.9.8h-.9zM13.5 7v7h4.2v-1.4h-2.6V7z"/></svg><div>네이버 블로그<small>sajik_madi 이웃추가</small></div></a>
+   <a class="ch ig" href="https://www.instagram.com/sajik_madi" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r=".8" fill="currentColor"/></svg><div>인스타그램<small>@sajik_madi 팔로우</small></div></a>
   </div>
  </div>
 </section>
@@ -399,27 +420,6 @@ footer .f-logo{filter:brightness(0) invert(1);height:26px;width:auto;margin-bott
    <div class="sn-step"><span>2</span>목 근육 과부하</div><div class="sn-arrow">↓</div>
    <div class="sn-step"><span>3</span>등 윗부분(상부 흉추) 부담</div><div class="sn-arrow">↓</div>
    <div class="sn-step" style="background:var(--gr);color:#fff"><span style="background:var(--or)">4</span>두통·어지럼 등 자율신경 증상</div>
-  </div>
- </div>
-</section>
-
-<!-- NEWS -->
-<section class="news" id="news">
- <div class="wrap">
-  <span class="eyebrow">VIDEO & BLOG</span>
-  <h2>원장님이 직접 전하는<br><b>건강 이야기</b></h2>
-  <p class="lead">유튜브와 블로그에 새 글이 올라오면 이곳에도 자동으로 보여요.</p>
-  <div class="tabs" role="tablist">
-   <button class="on" data-tab="videos">유튜브</button><button data-tab="blog">블로그</button><button data-tab="insta">인스타그램</button>
-  </div>
-  <div class="panel" id="p-videos"><div class="yt-main"><div class="yt-player"><iframe id="yt-frame" title="사직마디의원 유튜브" allow="accelerometer; encrypted-media; gyroscope; picture-in-picture" allowfullscreen loading="lazy"></iframe></div><div class="yt-list" id="yt-list"></div></div></div>
-  <div class="panel" id="p-blog" hidden><div class="posts" id="posts"></div><div class="more"><a class="btn btn-line" href="https://blog.naver.com/sajik_madi" target="_blank" rel="noopener">블로그 글 더 보기</a></div></div>
-  <div class="panel" id="p-insta" hidden><div class="ig-grid" id="ig-grid"></div>
-   <div class="ig-card" id="ig-card"><div class="ig-av"><img src="{{LOGO}}" alt=""></div><div><b>sajik_madi</b><span>사직마디의원 · 부산 동래구 사직동</span></div><a class="btn ig-btn" href="https://www.instagram.com/sajik_madi" target="_blank" rel="noopener">인스타그램에서 보기</a></div></div>
-  <div class="channels">
-   <a class="ch yt" href="https://www.youtube.com/@%EC%82%AC%EC%A7%81%EB%A7%88%EB%94%94" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M23 7.2a3 3 0 0 0-2.1-2.1C19 4.6 12 4.6 12 4.6s-7 0-8.9.5A3 3 0 0 0 1 7.2 31 31 0 0 0 .5 12a31 31 0 0 0 .5 4.8 3 3 0 0 0 2.1 2.1c1.9.5 8.9.5 8.9.5s7 0 8.9-.5a3 3 0 0 0 2.1-2.1 31 31 0 0 0 .5-4.8 31 31 0 0 0-.5-4.8zM9.7 15.1V8.9l5.8 3.1z"/></svg><div>유튜브<small>@사직마디 구독하기</small></div></a>
-   <a class="ch bl" href="https://blog.naver.com/sajik_madi" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M4 3h16a1 1 0 0 1 1 1v13a1 1 0 0 1-1 1h-6l-2 3-2-3H4a1 1 0 0 1-1-1V4a1 1 0 0 1 1-1zm3.5 4v7h2.2c1.6 0 2.5-.7 2.5-2 0-.8-.5-1.3-1.1-1.5.5-.3.8-.7.8-1.3 0-1.4-1-2.2-2.5-2.2zm1.6 1.3h.7c.5 0 .8.3.8.7s-.3.7-.8.7h-.7zm0 2.6h.9c.6 0 .9.3.9.8s-.3.8-.9.8h-.9zM13.5 7v7h4.2v-1.4h-2.6V7z"/></svg><div>네이버 블로그<small>sajik_madi 이웃추가</small></div></a>
-   <a class="ch ig" href="https://www.instagram.com/sajik_madi" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r=".8" fill="currentColor"/></svg><div>인스타그램<small>@sajik_madi 팔로우</small></div></a>
   </div>
  </div>
 </section>
