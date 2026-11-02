@@ -16,9 +16,14 @@ s = (here / "src.html").read_text(encoding="utf-8")
 s = s.replace("{{DOC}}", b64(here / "img/doctor.png", "WEBP", (700, 1050), quality=88))
 s = s.replace("{{LOGO}}", b64(here / "img/logo.png", "PNG", (420, 80), optimize=True))
 s = s.replace("{{MAP}}", b64(here / "img/map.jpg", "WEBP", (1100, 1100), quality=82))
+for i in range(1, 8):
+    s = s.replace(f"{{{{WHO{i}}}}}", b64(here / f"img/who{i}.png", "WEBP", (160, 160), quality=85))
+s = s.replace("{{SYMIMG}}", b64(here / "img/symptoms.png", "WEBP", (1300, 1500), quality=82))
 s = s.replace("{{FEED}}", (here / "feed.json").read_text(encoding="utf-8"))
 out = here.parent / "올릴파일"
 out.mkdir(exist_ok=True)
 (out / "index.html").write_text(s, encoding="utf-8")
 shutil.copy(here / "feed.json", out / "feed.json")
+for f in (here / "media").iterdir():  # 첫 화면 배경 영상처럼 따로 두는 파일
+    shutil.copy(f, out / f.name)
 print("올릴파일/index.html", len(s) // 1024, "KB")

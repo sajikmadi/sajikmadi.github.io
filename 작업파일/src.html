@@ -37,20 +37,24 @@ h2 b{font-weight:800}
 header{position:sticky;top:0;z-index:50;background:rgba(255,253,251,.94);backdrop-filter:blur(8px);border-bottom:1px solid var(--line)}
 .hd{display:flex;align-items:center;justify-content:space-between;height:68px}
 .hd .logo img{height:30px;width:auto}
-nav{display:flex;gap:28px;font-size:15px;font-weight:600;color:#444}
+nav{display:flex;gap:20px;font-size:14.5px;font-weight:600;color:#444;white-space:nowrap}
+@media (max-width:1200px){nav{gap:14px;font-size:14px}.hd-call span{display:none}.hd-call{padding:10px 12px}}
 nav a:hover{color:var(--or)}
-.hd-call{display:flex;align-items:center;gap:8px;background:var(--gr);color:#fff;font-weight:700;font-size:15px;padding:10px 18px;border-radius:30px}
+.hd-call{display:flex;align-items:center;gap:8px;white-space:nowrap;background:var(--gr);color:#fff;font-weight:700;font-size:15px;padding:10px 18px;border-radius:30px}
 .hd-call svg{width:16px;height:16px}
 
 /* hero */
-.hero{position:relative;overflow:hidden;padding:56px 0 0;background:linear-gradient(180deg,#fff 0%,var(--bg) 100%)}
-.hero .wrap{display:grid;grid-template-columns:1.05fr .95fr;align-items:end;gap:20px}
-.hero-txt{padding-bottom:96px}
+.hero{position:relative;overflow:hidden;min-height:min(80vh,720px);display:flex;align-items:center;background:#F3EEE9}
+.hero-bg{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;object-position:75% 50%}
+.hero::after{content:"";position:absolute;inset:0;background:linear-gradient(90deg,rgba(255,253,251,.97) 0%,rgba(255,253,251,.93) 36%,rgba(255,253,251,.6) 54%,rgba(255,253,251,0) 74%)}
+.hero .wrap{position:relative;z-index:1;width:100%}
+.hero-txt{padding:64px 0;max-width:620px}
 .tag{display:inline-flex;align-items:center;gap:6px;font-size:15px;font-weight:600;color:var(--gr);background:var(--gr-l);padding:7px 14px;border-radius:30px}
 .tag svg{width:15px;height:15px}
-.hero h1{margin-top:22px;font-size:clamp(38px,5.6vw,64px);line-height:1.18;letter-spacing:-.035em;font-weight:300;color:var(--ink)}
+.hero h1{margin-top:22px;font-size:clamp(32px,4.4vw,54px);line-height:1.18;letter-spacing:-.035em;font-weight:300;color:var(--ink)}
 .hero h1 b{font-weight:800;color:var(--or)}
 .hero h1 em{font-style:normal;font-weight:800;color:var(--gr)}
+.hero h1 .k{font-weight:800;color:var(--ink)}
 .hero p{margin-top:20px;font-size:18px;color:var(--sub);max-width:470px}
 .chips{display:flex;flex-wrap:wrap;gap:8px;margin-top:26px}
 .chips span{font-size:15px;font-weight:600;color:var(--gr);border:1.5px solid var(--gr);border-radius:30px;padding:5px 14px;background:#fff}
@@ -62,9 +66,6 @@ nav a:hover{color:var(--or)}
 .btn-gr{background:var(--gr);color:#fff}
 .btn-nv{background:#03C75A;color:#fff;box-shadow:0 8px 20px rgba(3,199,90,.25)}
 .btn-line{border:1.5px solid var(--line);background:#fff;color:var(--ink)}
-.hero-img{position:relative;align-self:end;display:flex;justify-content:center}
-.hero-img::before{content:"";position:absolute;left:0;right:0;bottom:0;height:70%;background:var(--or);border-radius:220px 220px 0 0}
-.hero-img img{position:relative;width:min(100%,470px)}
 .mark{position:absolute;right:-30px;top:20px;width:150px;opacity:.07}
 
 /* about */
@@ -72,6 +73,8 @@ nav a:hover{color:var(--or)}
 .about .wrap{display:grid;grid-template-columns:1fr 1.1fr;gap:56px;align-items:center}
 .about h2{color:#fff}
 .about h2 b{color:#F4B184}
+.about h2{font-size:clamp(26px,2.9vw,36px)}
+.about h2 .why{font-size:1.18em;letter-spacing:.02em}
 .quote{font-size:20px;line-height:1.75;color:#E5EEE7}
 .quote strong{color:#fff}
 .sign{margin-top:22px;font-size:16px;color:#B9CDBF}
@@ -83,13 +86,21 @@ nav a:hover{color:var(--or)}
 .pt p{font-size:15px;color:#C9D8CD}
 
 /* who */
-.who-grid{margin-top:32px;display:grid;grid-template-columns:repeat(3,1fr);gap:10px}
-.who{background:#fff;border:1px solid var(--line);border-radius:16px;padding:14px 18px;font-size:15px;line-height:1.55;color:var(--sub)}
+.who-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:14px}
+.who-hd{grid-row:span 1;align-self:center;padding-right:10px}
+.for-you h2{color:var(--or)}
+.who-hd p{margin-top:14px;font-size:15px;color:var(--sub)}
+.who-hd p b{color:var(--ink)}
+.who{background:#F3F3F2;border-radius:28px 28px 28px 0;padding:22px 22px 24px;display:flex;flex-direction:column;gap:16px}
+.who img{width:76px;height:76px}
+.who p{font-size:15.5px;line-height:1.6;color:var(--sub)}
 .who b{color:var(--ink)}
-.who .n{display:inline-block;font-size:13px;font-weight:800;color:var(--or);margin-right:8px;letter-spacing:.06em}
 
 /* symptoms */
-.symp{background:var(--gr-l)}
+.symp{background:#EDF5DE}
+.sym-img{display:block;width:100%;max-width:980px;margin:36px auto 0}
+.symp .sym-grid{display:none}
+.mbr{display:none}
 .sym-grid{margin-top:40px;display:grid;grid-template-columns:repeat(4,1fr);gap:14px}
 .sym{background:#fff;border-radius:20px;padding:22px 22px 18px}
 .sym h3{display:inline-block;font-size:16px;color:#fff;background:var(--gr);padding:5px 14px;border-radius:8px;margin-bottom:12px}
@@ -269,11 +280,20 @@ footer .f-logo{filter:brightness(0) invert(1);height:26px;width:auto;margin-bott
   nav,.hd-call span{display:none}
   .hd-call{padding:10px 12px}
   section{padding:64px 0}
-  .hero{padding-top:28px}
-  .hero .wrap,.about .wrap,.sn-box,.info-grid,.pr-grid{grid-template-columns:1fr}
-  .hero-txt{padding-bottom:0}
-  .hero-img img{width:min(85%,372px)}
-  .who-grid,.tr-grid{grid-template-columns:1fr}
+  .hero{display:block;min-height:0;padding:0}
+  .hero-bg{position:relative;height:auto;aspect-ratio:16/9;object-position:50% 50%}
+  .hero::after{display:none}
+  .about .wrap,.sn-box,.info-grid,.pr-grid{grid-template-columns:1fr}
+  .hero-txt{padding:24px 0 40px}
+  .tr-grid{grid-template-columns:1fr}
+  .who-grid{grid-template-columns:1fr 1fr;gap:8px}
+  .who-hd{grid-column:1/-1;padding:0 0 8px}
+  .who{padding:16px 14px 18px;gap:10px;border-radius:22px 22px 22px 0}
+  .who img{width:56px;height:56px}
+  .who p{font-size:13.5px}
+  .sym-img{display:none}
+  .symp .sym-grid{display:grid}
+  .mbr{display:inline}
   .sym-grid{grid-template-columns:1fr 1fr}
   .yt-main,.posts,.pr-2col,.sn-intro,.sn-feat{grid-template-columns:1fr}
   .sn-intro{gap:20px}
@@ -324,7 +344,7 @@ footer .f-logo{filter:brightness(0) invert(1);height:26px;width:auto;margin-bott
   .fee td:nth-last-child(2){white-space:normal}
   .fee-all{padding:0 14px}
   .sym-grid{grid-template-columns:1fr}
-  .hero h1{font-size:36px}
+  .hero h1{font-size:31px}
   .quote{font-size:18px}
   details .a{padding-left:0}
 }
@@ -336,7 +356,7 @@ footer .f-logo{filter:brightness(0) invert(1);height:26px;width:auto;margin-bott
  <div class="wrap hd">
   <a class="logo" href="#top" aria-label="사직마디의원"><img src="{{LOGO}}" alt="사직마디의원"></a>
   <nav>
-   <a href="#about">병원소개</a><a href="#news">영상·블로그</a><a href="#symptoms">진료과목</a><a href="#treatments">치료안내</a><a href="#faq">자주 묻는 질문</a><a href="#info">진료안내·오시는길</a>
+   <a href="#about">병원소개</a><a href="#news">영상·블로그</a><a href="#symptoms">진료과목</a><a href="#treatments">치료안내</a><a href="#snepi">자율신경치료</a><a href="#faq">자주 묻는 질문</a><a href="#info">진료안내·오시는길</a>
   </nav>
   <div class="hd-r">
   <div class="hd-sns">
@@ -352,11 +372,11 @@ footer .f-logo{filter:brightness(0) invert(1);height:26px;width:auto;margin-bott
 <main id="top">
 <!-- HERO -->
 <section class="hero">
-
+ <video class="hero-bg" src="hero.mp4" poster="hero_poster.jpg" autoplay muted loop playsinline preload="auto" aria-hidden="true"></video>
  <div class="wrap">
   <div class="hero-txt">
    <span class="tag"><svg viewBox="0 0 24 24" fill="#D87036"><path d="M12 2C8 2 5 5 5 9c0 5 7 13 7 13s7-8 7-13c0-4-3-7-7-7zm0 9.5A2.5 2.5 0 1 1 12 6.5a2.5 2.5 0 0 1 0 5z"/></svg>부산 동래구 사직동 · 사직사거리</span>
-   <h1>아픈 이유부터 찾는<br><b>비수술</b> <em>통증치료</em></h1>
+   <h1>원인 없는 통증은 없습니다.<br><span class="k">비수술</span> <b>통증치료</b><br><em>자율신경 스네피치료</em></h1>
    <p>목·어깨·허리·관절 통증부터 두통·어지럼 같은 자율신경 증상까지, 통증이 시작된 원인을 찾아 치료합니다.</p>
    <div class="chips"><span>목·어깨</span><span>허리</span><span>관절</span><span>두통·어지럼</span><span>자율신경 스네피치료</span></div>
    <div class="cta">
@@ -364,7 +384,6 @@ footer .f-logo{filter:brightness(0) invert(1);height:26px;width:auto;margin-bott
     <a class="btn btn-line" href="tel:0515030203"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><path d="M5 4h4l2 5-2.5 1.5a11 11 0 0 0 5 5L15 13l5 2v4a2 2 0 0 1-2 2A16 16 0 0 1 3 6a2 2 0 0 1 2-2"/></svg>전화 상담</a>
    </div>
   </div>
-  <div class="hero-img"><img src="{{DOC}}" alt="사직마디의원 서정현 원장"></div>
  </div>
 </section>
 
@@ -373,7 +392,7 @@ footer .f-logo{filter:brightness(0) invert(1);height:26px;width:auto;margin-bott
  <div class="wrap">
   <div>
    <span class="eyebrow" style="color:#F4B184">ABOUT</span>
-   <h2>통증을 잠깐 덮기보다<br><b>다시 아프지 않게</b></h2>
+   <h2>통증이 <b class="why">‘왜’</b> <b>반복되고<br>만성이 되는지</b><br>답답하고 의문이신가요?</h2>
    <p class="quote" style="margin-top:24px">통증은 우리 몸이 보내는 신호입니다. 신호만 끄기보다 <strong>그 신호가 어디서 시작됐는지</strong> 찾는 데서 치료를 시작합니다. 오래 아파서 지치신 분들께도 <strong>먼저 포기하지 않는 병원</strong>이 되겠습니다.</p>
    <p class="sign">사직마디의원 대표원장<b>서정현</b></p>
   </div>
@@ -408,17 +427,21 @@ footer .f-logo{filter:brightness(0) invert(1);height:26px;width:auto;margin-bott
 </section>
 
 <!-- WHO -->
-<section>
+<section class="for-you">
  <div class="wrap">
-  <span class="eyebrow">FOR YOU</span>
-  <h2>이런 분들께<br><b>사직마디의원을 권해드려요</b></h2>
   <div class="who-grid">
-   <div class="who"><span class="n">01</span>CT·MRI 검사로도 원인을 찾지 못해 <b>여러 병원을 다녀 보신&nbsp;분</b></div>
-   <div class="who"><span class="n">02</span>수술 후에도 불편함이 남아 <b>비수술 치료를 원하시는&nbsp;분</b></div>
-   <div class="who"><span class="n">03</span>오래된 통증이라 <b>치료를 미뤄 오신&nbsp;분</b></div>
-   <div class="who"><span class="n">04</span><b>스테로이드 주사가 부담</b>되거나 더 이상 맞기 어려우신&nbsp;분</div>
-   <div class="who"><span class="n">05</span>당뇨·신장질환 등으로 <b>약물치료가 어려우신&nbsp;분</b></div>
-   <div class="who"><span class="n">06</span>임신 중이거나 운동선수·성장기 아이처럼 <b>약 사용이 조심스러운&nbsp;분</b></div>
+   <div class="who-hd">
+    <span class="eyebrow">FOR YOU</span>
+    <h2>사직마디는<br><b>이런 분들께 추천합니다</b></h2>
+    <p>여러 병원을 전전하고, 다양한 치료법을 시도해 보았지만 차도가 없어 지치고 치료를 포기하고픈 분들께 <b>사직마디의원이 종착역이 되겠습니다.</b></p>
+   </div>
+   <div class="who"><img src="{{WHO1}}" alt=""><p>CT·MRI 등 검사로도 확인되지 않고, <b>대학병원을 전전하지만 해결이 되지 않는&nbsp;분</b></p></div>
+   <div class="who"><img src="{{WHO2}}" alt=""><p>수술했는데도 <b>여전히 아프거나, 비수술적 치료로 낫고 싶으신&nbsp;분</b></p></div>
+   <div class="who"><img src="{{WHO3}}" alt=""><p>너무 오래된 고질병이라 <b>치료를 포기</b>하고 지내시는&nbsp;분</p></div>
+   <div class="who"><img src="{{WHO4}}" alt=""><p><b>스테로이드 부작용을</b> 경험한 적이 있거나 더 이상 스테로이드가 효과가 없는&nbsp;분</p></div>
+   <div class="who"><img src="{{WHO5}}" alt=""><p><b>당뇨나 신장질환</b> 등으로 인해 <b>약물치료가 어려우신&nbsp;분</b></p></div>
+   <div class="who"><img src="{{WHO6}}" alt=""><p>약물을 사용하면 안 되는 <b>운동선수·임산부·성장기에 있는 아이들</b></p></div>
+   <div class="who"><img src="{{WHO7}}" alt=""><p><b>위장장애로 진통소염제 복용이 두려우신&nbsp;분</b></p></div>
   </div>
  </div>
 </section>
@@ -427,7 +450,8 @@ footer .f-logo{filter:brightness(0) invert(1);height:26px;width:auto;margin-bott
 <section class="symp" id="symptoms">
  <div class="wrap">
   <span class="eyebrow">SYMPTOMS</span>
-  <h2>이런 증상을<br><b>치료합니다</b></h2>
+  <h2>이런 증상을 <b>치료합니다</b></h2>
+  <img class="sym-img" src="{{SYMIMG}}" alt="사직마디의원이 치료하는 증상 — 머리, 목·허리, 어깨, 등, 가슴, 자율신경계, 고관절·엉덩이, 무릎, 손·발">
   <div class="sym-grid">
    <div class="sym"><h3>머리</h3><ul><li>두통</li><li>어지럼증</li><li>지끈거림, 멍함</li></ul></div>
    <div class="sym"><h3>목·허리</h3><ul><li>일자목, 거북목</li><li>목·허리 디스크, 협착증</li><li>급성 요추 염좌(허리 삐끗)</li></ul></div>
@@ -445,7 +469,7 @@ footer .f-logo{filter:brightness(0) invert(1);height:26px;width:auto;margin-bott
 <section id="treatments">
  <div class="wrap">
   <span class="eyebrow">TREATMENTS</span>
-  <h2>사직마디의원의<br><b>치료 방법</b></h2>
+  <h2>사직마디의원의 <br class="mbr"><b>치료 방법</b></h2>
   <div class="tr-grid">
    <div class="tr"><div class="hd2"><div class="ic"><svg viewBox="0 0 24 24"><path d="M18 2l4 4M17 7l-9.5 9.5L4 20l3.5-3.5M14 4l6 6M11 7l6 6M8 13l3 3"/></svg></div><h3>근육신경회복주사</h3></div><p>스테로이드 대신 인체에 무해한 포도당(5% 미만)을 사용해, 통증의 원인이 되는 근육과 신경을 치료하는 주사입니다.</p></div>
    <div class="tr"><div class="hd2"><div class="ic"><svg viewBox="0 0 24 24"><path d="M12 3a4 4 0 0 1 4 4v1a3 3 0 0 1 2 5 3 3 0 0 1-2 5 4 4 0 0 1-8 0 3 3 0 0 1-2-5 3 3 0 0 1 2-5V7a4 4 0 0 1 4-4zM12 3v18"/></svg></div><h3>자율신경 스네피치료</h3></div><p>목과 등 윗부분을 함께 치료해 두통·어지럼·소화불량·불면 같은 자율신경 증상을 살피는 치료입니다.</p></div>
