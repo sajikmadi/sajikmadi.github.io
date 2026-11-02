@@ -227,9 +227,9 @@ details .a b{color:var(--ink)}
 .ch svg{flex:none;width:34px;height:34px}
 .ch.yt{background:#E33B2E}.ch.bl{background:#03A94D}.ch.ig{background:linear-gradient(120deg,#F58529,#DD2A7B 55%,#8134AF)}
 .hd-sns{display:flex;gap:6px;margin-right:10px}
-.hd-sns a{width:34px;height:34px;border-radius:50%;display:grid;place-items:center;color:var(--sub)}
-.hd-sns a:hover{background:var(--or-l);color:var(--or)}
-.hd-sns svg{width:19px;height:19px}
+.hd-sns a{width:34px;height:34px;display:grid;place-items:center;transition:transform .15s}
+.hd-sns a:hover{transform:translateY(-2px)}
+.hd-sns svg{width:26px;height:26px}
 .hd-r{display:flex;align-items:center}
 
 footer{background:var(--gr-d);color:#AFC3B5;font-size:14px;padding:44px 0 120px}
@@ -289,9 +289,9 @@ footer .f-logo{filter:brightness(0) invert(1);height:26px;width:auto;margin-bott
   </nav>
   <div class="hd-r">
   <div class="hd-sns">
-   <a href="https://www.youtube.com/@%EC%82%AC%EC%A7%81%EB%A7%88%EB%94%94" target="_blank" rel="noopener" aria-label="유튜브"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M23 7.2a3 3 0 0 0-2.1-2.1C19 4.6 12 4.6 12 4.6s-7 0-8.9.5A3 3 0 0 0 1 7.2 31 31 0 0 0 .5 12a31 31 0 0 0 .5 4.8 3 3 0 0 0 2.1 2.1c1.9.5 8.9.5 8.9.5s7 0 8.9-.5a3 3 0 0 0 2.1-2.1 31 31 0 0 0 .5-4.8 31 31 0 0 0-.5-4.8zM9.7 15.1V8.9l5.8 3.1z"/></svg></a>
-   <a href="https://blog.naver.com/sajik_madi" target="_blank" rel="noopener" aria-label="블로그"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M4 3h16a1 1 0 0 1 1 1v13a1 1 0 0 1-1 1h-6l-2 3-2-3H4a1 1 0 0 1-1-1V4a1 1 0 0 1 1-1zm3.5 4v7h2.2c1.6 0 2.5-.7 2.5-2 0-.8-.5-1.3-1.1-1.5.5-.3.8-.7.8-1.3 0-1.4-1-2.2-2.5-2.2zm1.6 1.3h.7c.5 0 .8.3.8.7s-.3.7-.8.7h-.7zm0 2.6h.9c.6 0 .9.3.9.8s-.3.8-.9.8h-.9zM13.5 7v7h4.2v-1.4h-2.6V7z"/></svg></a>
-   <a href="https://www.instagram.com/sajik_madi" target="_blank" rel="noopener" aria-label="인스타그램"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r=".8" fill="currentColor"/></svg></a>
+   <a class="yt" href="https://www.youtube.com/@%EC%82%AC%EC%A7%81%EB%A7%88%EB%94%94" target="_blank" rel="noopener" aria-label="유튜브" title="유튜브"><svg viewBox="0 0 24 24"><rect x="1" y="4.5" width="22" height="15" rx="4.5" fill="#FF0000"/><path d="M9.8 8.6v6.8l5.8-3.4z" fill="#fff"/></svg></a>
+   <a class="bl" href="https://blog.naver.com/sajik_madi" target="_blank" rel="noopener" aria-label="네이버 블로그" title="네이버 블로그"><svg viewBox="0 0 24 24"><rect x="1" y="1" width="22" height="22" rx="6" fill="#03C75A"/><text x="12" y="15.6" text-anchor="middle" font-family="Arial,sans-serif" font-size="8.6" font-weight="800" fill="#fff">blog</text></svg></a>
+   <a class="ig" href="https://www.instagram.com/sajik_madi" target="_blank" rel="noopener" aria-label="인스타그램" title="인스타그램"><svg viewBox="0 0 24 24"><defs><radialGradient id="igg" cx="30%" cy="107%" r="150%"><stop offset="0" stop-color="#FDF497"/><stop offset=".05" stop-color="#FDF497"/><stop offset=".45" stop-color="#FD5949"/><stop offset=".6" stop-color="#D6249F"/><stop offset=".9" stop-color="#285AEB"/></radialGradient></defs><rect x="1" y="1" width="22" height="22" rx="6" fill="url(#igg)"/><rect x="6" y="6" width="12" height="12" rx="3.6" fill="none" stroke="#fff" stroke-width="1.8"/><circle cx="12" cy="12" r="2.9" fill="none" stroke="#fff" stroke-width="1.8"/><circle cx="15.6" cy="8.4" r=".9" fill="#fff"/></svg></a>
   </div>
   <a class="hd-call" href="tel:0515030203"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M6.6 10.8a15.1 15.1 0 0 0 6.6 6.6l2.2-2.2c.3-.3.7-.4 1-.2 1.1.4 2.3.6 3.6.6.6 0 1 .4 1 1V20c0 .6-.4 1-1 1A17 17 0 0 1 3 4c0-.6.4-1 1-1h3.5c.6 0 1 .4 1 1 0 1.3.2 2.5.6 3.6.1.3 0 .7-.2 1z"/></svg><span>051-503-0203</span></a>
   </div>
