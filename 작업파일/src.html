@@ -63,8 +63,8 @@ nav a:hover{color:var(--or)}
 .btn-nv{background:#03C75A;color:#fff;box-shadow:0 8px 20px rgba(3,199,90,.25)}
 .btn-line{border:1.5px solid var(--line);background:#fff;color:var(--ink)}
 .hero-img{position:relative;align-self:end;display:flex;justify-content:center}
-.hero-img::before{content:"";position:absolute;left:4%;right:0;bottom:0;height:70%;background:var(--or);border-radius:220px 220px 0 0}
-.hero-img img{position:relative;width:min(100%,430px)}
+.hero-img::before{content:"";position:absolute;left:0;right:0;bottom:0;height:70%;background:var(--or);border-radius:220px 220px 0 0}
+.hero-img img{position:relative;width:min(100%,470px)}
 .mark{position:absolute;right:-30px;top:20px;width:150px;opacity:.07}
 
 /* about */
@@ -131,7 +131,7 @@ details .a b{color:var(--ink)}
 
 /* price */
 .price{background:#fff}
-.pr-grid{margin-top:36px;display:grid;grid-template-columns:1fr 1fr;gap:20px}
+.pr-grid{margin-top:36px;display:grid;grid-template-columns:1fr 1fr 1fr;gap:20px}
 .pr{border:1px solid var(--line);border-radius:20px;padding:24px 26px}
 .pr h3{font-size:17px;color:var(--gr);margin-bottom:10px}
 .pr table{width:100%;border-collapse:collapse;font-size:15px}
@@ -145,6 +145,18 @@ details .a b{color:var(--ink)}
 .pr.wide td{border-bottom:1.5px dashed #B9AFA4}
 .pr.wide .opt td{border-bottom-color:#E2B89C}
 .pr-2col{display:grid;grid-template-columns:1fr 1fr;gap:28px;align-items:start}
+.fee-all{margin-top:20px}
+.fee-all summary{font-size:16px;justify-content:center;padding:16px 0}
+.fee-all summary::after{margin-left:6px;font-size:22px}
+.fee-note{font-size:13px;color:#8A9096;margin-bottom:10px}
+.fee-scroll{overflow-x:auto}
+.fee{width:100%;border-collapse:collapse;font-size:14px;min-width:560px}
+.fee th,.fee td{padding:9px 10px;border-bottom:1px solid var(--line);text-align:left;vertical-align:middle}
+.fee thead th{background:#F4F6F5;color:var(--ink);font-weight:700;text-align:center}
+.fee tbody th{color:var(--gr);font-weight:700;text-align:center;background:#FAFBFA;border-right:1px solid var(--line);white-space:nowrap}
+.fee td:nth-last-child(2){text-align:right;font-weight:700;color:#1E5C8C;white-space:nowrap}
+.fee td:last-child{font-size:12.5px;color:#8A9096}
+.fee-foot{margin:14px 0 22px;padding-left:18px;font-size:12.5px;color:#8A9096}
 .opt{background:#FFF7F1;border:1.5px dashed #EFC9B2;border-radius:12px;padding:10px 14px}
 .opt h4{font-size:14px;color:#C25E27;margin-bottom:2px}
 .opt table{font-size:13px}
@@ -235,7 +247,7 @@ footer .f-logo{filter:brightness(0) invert(1);height:26px;width:auto;margin-bott
   .hero{padding-top:28px}
   .hero .wrap,.about .wrap,.sn-box,.info-grid,.pr-grid{grid-template-columns:1fr}
   .hero-txt{padding-bottom:0}
-  .hero-img img{width:min(78%,340px)}
+  .hero-img img{width:min(85%,372px)}
   .who-grid,.tr-grid{grid-template-columns:1fr}
   .sym-grid{grid-template-columns:1fr 1fr}
   .yt-main,.channels,.posts,.pr-2col{grid-template-columns:1fr}
@@ -255,6 +267,11 @@ footer .f-logo{filter:brightness(0) invert(1);height:26px;width:auto;margin-bott
   .mbar svg{width:22px;height:22px}
 }
 @media (max-width:520px){
+  .fee{min-width:0;font-size:13px}
+  .fee th,.fee td{padding:8px 6px}
+  .fee td:last-child,.fee thead th:last-child{display:none}
+  .fee td:nth-last-child(2){white-space:normal}
+  .fee-all{padding:0 14px}
   .sym-grid{grid-template-columns:1fr}
   .hero h1{font-size:36px}
   .quote{font-size:18px}
@@ -432,9 +449,10 @@ footer .f-logo{filter:brightness(0) invert(1);height:26px;width:auto;margin-bott
    <div class="pr"><h3>도수치료</h3><table>
     <tr><td>기본 수기치료 10분</td><td>2,000원</td></tr>
     <tr><td>관리급여 30분</td><td>42,000원</td></tr></table></div>
-   <div class="pr"><h3>체외충격파 · 검사</h3><table>
-    <tr><td>체외충격파 2,000타</td><td>50,000원</td></tr><tr><td>체외충격파 4,000타</td><td>80,000원</td></tr>
-    <tr><td>자율신경 검사<small>옴니핏 뇌파·맥파 — 두뇌건강, 스트레스·자율신경 상태 확인</small></td><td>45,000원</td></tr></table></div>
+   <div class="pr"><h3>체외충격파</h3><table>
+    <tr><td>체외충격파 2,000타</td><td>50,000원</td></tr><tr><td>체외충격파 4,000타</td><td>80,000원</td></tr></table></div>
+   <div class="pr"><h3>자율신경 검사</h3><table>
+    <tr><td>옴니핏 뇌파·맥파<small>두뇌건강, 스트레스·자율신경 상태 확인</small></td><td>45,000원</td></tr></table></div>
    <div class="pr wide"><h3>수액치료</h3><div class="pr-2col"><table>
     <tr><td>프리미엄 올인원<small>마이어스 칵테일 + 영양수액</small><em class="ef">회복과 영양보충을 한번에</em></td><td>100,000원</td></tr>
     <tr><td>면역 주사 <span class="best">BEST</span><small>싸이모신 알파원</small><em class="ef">면역 NK/T세포 활성화, 면역력 강화, 항암효과</em></td><td>60,000원</td></tr>
@@ -448,6 +466,36 @@ footer .f-logo{filter:brightness(0) invert(1);height:26px;width:auto;margin-bott
     <tr><td>마늘주사<em class="ef">숙취회복 / 피로회복</em></td><td>10,000원</td></tr>
     <tr><td>징코발<em class="ef">뇌기능 강화 / 혈액순환 / 현기증·어지러움 / 손발차가움</em></td><td>10,000원</td></tr></table></div></div></div>
   </div>
+  <details class="fee-all">
+   <summary>전체 비급여 진료비 보기</summary>
+   <p class="fee-note">※ 의료법 제45조에 의하여 당 의원에서 고지하는 비급여 진료비용입니다. (2026년 기준)</p>
+   <div class="fee-scroll"><table class="fee">
+    <thead><tr><th>분류</th><th>항목</th><th>가격(원)</th><th>비고</th></tr></thead>
+    <tbody>
+     <tr><th>증식치료</th><td>증식치료(프롤로테라피)</td><td>5,000 ~ 200,000</td><td>부위/범위에 따라 상이</td></tr>
+     <tr><th rowspan="9">주사료</th><td>리포라제주</td><td>10,000 ~ 100,000</td><td>조직흡수 촉진제</td></tr>
+     <tr><td>폴리네오주</td><td>50,000</td><td>PDRN(조직 재생·회복)</td></tr>
+     <tr><td>라이넥</td><td>30,000</td><td>태반유래성분주사</td></tr>
+     <tr><td>파노펜</td><td>30,000 ~ 100,000</td><td>해열, 진통수액</td></tr>
+     <tr><td>멀티비타민</td><td>40,000</td><td>멀티비타민 수액</td></tr>
+     <tr><td>마이어스</td><td>50,000</td><td>멀티비타민, 마그네슘 수액</td></tr>
+     <tr><td>닥터라민골드</td><td>60,000</td><td>영양수액</td></tr>
+     <tr><td>글루타온주</td><td>30,000 / 40,000</td><td>글루타치온 (고용량 40,000)</td></tr>
+     <tr><td>싸이원주</td><td>60,000</td><td>싸이모신 알파-1</td></tr>
+     <tr><th>진단초음파</th><td>근골격, 연부관절 초음파</td><td>20,000 ~</td><td>촬영부위에 따라 상이</td></tr>
+     <tr><th>검사</th><td>자율신경 검사</td><td>45,000</td><td>옴니핏 뇌파·맥파</td></tr>
+     <tr><th rowspan="2">물리치료</th><td>신장분사</td><td>10,000(2분) / 70,000 ~ 130,000</td><td>치료시간/부위에 따라 상이</td></tr>
+     <tr><td>체외충격파(ESWT)</td><td>50,000 ~ 100,000</td><td>2,000타~ (타수별 금액 상이)</td></tr>
+     <tr><th rowspan="4">제증명수수료</th><td>진료기록지</td><td>1,000</td><td>5장 초과 시 매당 100원 추가</td></tr>
+     <tr><td>진료확인서</td><td>3,000</td><td>발행 1건당</td></tr>
+     <tr><td>진단서 / 소견서</td><td>20,000</td><td>발행 1건당</td></tr>
+     <tr><td>상해진단서</td><td>100,000</td><td>발행 1건당</td></tr>
+    </tbody></table></div>
+   <ul class="fee-foot">
+    <li>본 비급여 진료비용은 환자의 증상, 치료 부위, 사용 약제/타수/시간 등에 따라 차등 적용될 수 있습니다.</li>
+    <li>자세한 항목 및 금액은 진료 전 담당 의료진 및 안내 창구에 문의해 주시기 바랍니다.</li>
+   </ul>
+  </details>
  </div>
 </section>
 
