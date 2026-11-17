@@ -1,5 +1,6 @@
 """src.html + 이미지 + feed.json → ../올릴파일/index.html (사진을 파일 안에 넣어 한 파일로 만든다)"""
 import base64, io, json, shutil
+from datetime import date
 from pathlib import Path
 from PIL import Image
 
@@ -26,4 +27,13 @@ out.mkdir(exist_ok=True)
 shutil.copy(here / "feed.json", out / "feed.json")
 for f in (here / "media").iterdir():  # 첫 화면 배경 영상처럼 따로 두는 파일
     shutil.copy(f, out / f.name)
+# 올릴 때마다 사이트맵 수정 날짜를 오늘로 — 검색로봇이 바뀐 걸 알게
+(out / "sitemap.xml").write_text(f"""<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+  <url>
+    <loc>https://sajikmadi.github.io/</loc>
+    <lastmod>{date.today().isoformat()}</lastmod>
+  </url>
+</urlset>
+""", encoding="utf-8")
 print("올릴파일/index.html", len(s) // 1024, "KB")
