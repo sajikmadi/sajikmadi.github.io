@@ -31,7 +31,7 @@ for f in (here / "media").iterdir():  # 첫 화면 배경 영상처럼 따로 �
 (out / "sitemap.xml").write_text(f"""<?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
-    <loc>https://sajikmadi.github.io/</loc>
+    <loc>https://sajikmadi.com/</loc>
     <lastmod>{date.today().isoformat()}</lastmod>
   </url>
 </urlset>
